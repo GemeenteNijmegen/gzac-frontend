@@ -15,9 +15,14 @@
  */
 
 // Used by production/release builds via angular.json fileReplacements (swapped
-// in for app-plugins.ts). CI installs the @valtimo-plugins/* packages from
-// release-plugins.json before building.
-import {SmtpMailPluginModule, smtpmailPluginSpecification} from '@valtimo-plugins/smtpmail';
+// in for app-plugins.ts). Keep this list in line with the community plugins in
+// gzac-backend's build.gradle.kts; versions are pinned in package.json.
+import {ArchiefPluginModule, archiefPluginSpecification} from '@valtimo-plugins/archief';
+import {CloudEventPluginModule, cloudEventPluginSpecification} from '@valtimo-plugins/cloud-event';
+import {
+  ExterneKlanttaakPluginModule,
+  externeKlanttaakPluginSpecification,
+} from '@valtimo-plugins/externe-klanttaak';
 import {
   DocumentGeneratorPluginModule,
   documentGeneratorPluginSpecification,
@@ -26,17 +31,86 @@ import {
   TextTemplatePluginModule,
   textTemplatePluginSpecification,
 } from '@valtimo-plugins/freemarker';
+import {
+  HaalCentraalBagPluginModule,
+  haalCentraalBagPluginSpecification,
+  HaalCentraalBrpPersonenPluginModule,
+  haalCentraalBrpPersonenPluginSpecification,
+  HaalCentraalBrpPluginModule,
+  haalCentraalBrpPluginSpecification,
+} from '@valtimo-plugins/haal-centraal';
+import {KvkPluginModule, kvkPluginSpecification} from '@valtimo-plugins/kvk-handelsregister';
+import {
+  MtlsSslcontextPluginModule,
+  mTlsSslcontextPluginSpecification,
+} from '@valtimo-plugins/mtls-sslcontext';
+import {NotifyNlPluginModule, notifyNlPluginSpecification} from '@valtimo-plugins/notify-nl';
+import {
+  ObjectManagementPluginModule,
+  objectManagementPluginSpecification,
+} from '@valtimo-plugins/object-management';
+import {OipKlanttaakPluginModule, oipKlanttaakPluginSpecification} from '@valtimo-plugins/oip-klanttaak';
+import {OpenProductPluginModule, openProductPluginSpecification} from '@valtimo-plugins/open-product';
+import {OpenKlantPluginModule, openKlantPluginSpecification} from '@valtimo-plugins/openklant';
+import {PublictaskPluginModule, publictaskPluginSpecification} from '@valtimo-plugins/publictask';
+import {SlackPluginModule, slackPluginSpecification} from '@valtimo-plugins/slack';
+import {SmtpMailPluginModule, smtpmailPluginSpecification} from '@valtimo-plugins/smtpmail';
+import {SpotlerPluginModule, spotlerPluginSpecification} from '@valtimo-plugins/spotler';
+import {SuwinetPluginModule, suwinetPluginSpecification} from '@valtimo-plugins/suwinet';
+import {
+  TokenAuthenticationPluginModule,
+  tokenAuthenticationPluginSpecification,
+} from '@valtimo-plugins/token-authentication';
+import {XentialPluginModule, xentialPluginSpecification} from '@valtimo-plugins/xential';
 
 export const pluginImports = [
-  SmtpMailPluginModule,
+  ArchiefPluginModule,
+  CloudEventPluginModule,
+  ExterneKlanttaakPluginModule,
   DocumentGeneratorPluginModule,
   MailTemplatePluginModule,
   TextTemplatePluginModule,
+  HaalCentraalBagPluginModule,
+  HaalCentraalBrpPersonenPluginModule,
+  HaalCentraalBrpPluginModule,
+  KvkPluginModule,
+  MtlsSslcontextPluginModule,
+  NotifyNlPluginModule,
+  ObjectManagementPluginModule,
+  OipKlanttaakPluginModule,
+  OpenProductPluginModule,
+  OpenKlantPluginModule,
+  PublictaskPluginModule,
+  SlackPluginModule,
+  SmtpMailPluginModule,
+  SpotlerPluginModule,
+  SuwinetPluginModule,
+  TokenAuthenticationPluginModule,
+  XentialPluginModule,
 ];
 
 export const pluginSpecifications = [
-  smtpmailPluginSpecification,
+  archiefPluginSpecification,
+  cloudEventPluginSpecification,
+  externeKlanttaakPluginSpecification,
   documentGeneratorPluginSpecification,
   mailTemplatePluginSpecification,
   textTemplatePluginSpecification,
+  haalCentraalBagPluginSpecification,
+  haalCentraalBrpPersonenPluginSpecification,
+  haalCentraalBrpPluginSpecification,
+  kvkPluginSpecification,
+  mTlsSslcontextPluginSpecification,
+  notifyNlPluginSpecification,
+  objectManagementPluginSpecification,
+  oipKlanttaakPluginSpecification,
+  openProductPluginSpecification,
+  openKlantPluginSpecification,
+  publictaskPluginSpecification,
+  slackPluginSpecification,
+  smtpmailPluginSpecification,
+  spotlerPluginSpecification,
+  suwinetPluginSpecification,
+  tokenAuthenticationPluginSpecification,
+  xentialPluginSpecification,
 ];
